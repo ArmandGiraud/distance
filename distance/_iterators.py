@@ -15,10 +15,10 @@ def ilevenshtein(seq1, seqs, max_dist=-1):
 	the reference sequence in the C implementation; the same holds true for
 	`ifast_comp`.
 	"""
-	for seq2 in seqs:
+	for i, seq2 in enumerate(seqs):
 		dist = levenshtein(seq1, seq2, max_dist=max_dist)
 		if dist != -1:
-			yield dist, seq2
+			yield dist, i, seq2
 
 
 def ifast_comp(seq1, seqs, transpositions=False):
