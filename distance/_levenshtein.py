@@ -3,7 +3,7 @@
 from array import array
 
 
-def levenshtein(seq1, seq2, normalized=False, max_dist=-1):
+def levenshtein(seq1, seq2, max_dist=-1, normalized=False):
 	"""Compute the absolute Levenshtein distance between the two sequences
 	`seq1` and `seq2`.
 	
